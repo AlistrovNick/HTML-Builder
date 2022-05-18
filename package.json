@@ -1,0 +1,23 @@
+{
+  "name": "html-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlistrovNick/HTML-Builder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlistrovNick/HTML-Builder/issues"
+  },
+  "homepage": "https://github.com/AlistrovNick/HTML-Builder#readme",
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  }
+}
