@@ -3,13 +3,13 @@ const fs = require("fs");
 const { stdin } = process;
 
 const FILE_NAME = "output.txt";
-const EXIT_WORD = 'exit';
+const EXIT_WORD = "exit";
 const filePath = path.join(__dirname, FILE_NAME);
 const option = {
-    flags: 'a',
+    flags: "a",
     encoding: null,
     mode: 0666
-}
+};
 let output;
 
 greeting();
@@ -21,7 +21,7 @@ function greeting() {
 }
 
 function handleEnteredText() {
-    stdin.on('data', data => {
+    stdin.on("data", data => {
         let text = data.toString().trim();
         if (text === EXIT_WORD) {
             process.exit(0);
@@ -38,10 +38,10 @@ async function writeToFile(text) {
 }
 
 function parting() {
-    process.on('SIGINT', () => {
+    process.on("SIGINT", () => {
         process.exit();
     });
-    process.on('exit', () => {
-        console.log('Good Bye!');
+    process.on("exit", () => {
+        console.log("Good Bye!");
     });
 }

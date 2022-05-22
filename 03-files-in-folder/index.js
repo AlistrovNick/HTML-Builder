@@ -1,7 +1,7 @@
-const path = require('path');
-const fs = require('fs/promises');
+const path = require("path");
+const fs = require("fs/promises");
 
-const secretFolderPath = path.join(__dirname, 'secret-folder');
+const secretFolderPath = path.join(__dirname, "secret-folder");
 
 readDirs(secretFolderPath);
 
@@ -24,7 +24,7 @@ async function getFileInfo(filePath) {
     let fileSize = `${fileStat.size}b`;
     let fileExt = path.extname(filePath);
     let fileName = path.basename(filePath, fileExt);
-    fileExt = fileExt.replace('.', '');
-    let fileInfo = [fileName, fileExt, fileSize].join(' - ');
+    fileExt = fileExt.replace(".", "");
+    let fileInfo = [fileName, fileExt, fileSize].join(" - ");
     return fileInfo;
 } 

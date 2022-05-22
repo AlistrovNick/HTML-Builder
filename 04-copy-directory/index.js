@@ -1,8 +1,8 @@
-const path = require('path');
-const fs = require('fs/promises');
+const path = require("path");
+const fs = require("fs/promises");
 
-let srcPath = path.join(__dirname, 'files');
-let destPath = path.join(__dirname, 'files-copy');
+let srcPath = path.join(__dirname, "files");
+let destPath = path.join(__dirname, "files-copy");
 
 createDestDir(destPath);
 deepCopyingDirWithFiles(srcPath, destPath);
@@ -11,7 +11,7 @@ async function createDestDir(destPath) {
     let isDestDirNotExist;
     await fs.access(destPath)
         .then(() => isDestDirNotExist = false)
-        .catch(err => isDestDirNotExist = true);
+        .catch(() => isDestDirNotExist = true);
     if (isDestDirNotExist) {
         await fs.mkdir(destPath);
     }
